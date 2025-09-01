@@ -5,7 +5,42 @@
   
   <Page title="Employees">
     <content>
-      <Text text="Welcome to the Employees page."/>
-    </content>
+            <Table id="Employees_Table" inset="false" headerText="Employees List" items="{/Employees}">
+
+                <columns>
+                    <Column>
+                        <Text text="Employee ID"/>
+                    </Column>
+                    <Column>
+                        <Text text="First Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Last Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Hire Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Mobile No."/>
+                    </Column>
+                    <Column>
+                        <Text text="Address"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{EmployeeID}"/>
+                            <Text text="{FirstName}"/>
+                            <Text text="{LastName}"/>
+                            <Text text="{HireDate}"/>
+                            <Text text="{HomePhone}"/>
+                            <Text text="{Address}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
   </Page>
 </mvc:View>

@@ -1,11 +1,41 @@
-<mvc:View
-  controllerName="project3.controller.Products"
-  xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
-  
-  <Page title="Products">
-    <content>
-      <Text text="This is the Products page."/>
-    </content>
-  </Page>
+<mvc:View controllerName="project3.controller.Products"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <Page title="Products">
+        <content>
+            <Table id="productsTable" inset="false" headerText="Products List" items="{/Products}">
+
+                <columns>
+                    <Column>
+                        <Text text="Product ID"/>
+                    </Column>
+                    <Column>
+                        <Text text="Product Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Price"/>
+                    </Column>
+                    <Column>
+                        <Text text="Units in Stock"/>
+                    </Column>
+                    <Column>
+                        <Text text="Units in Order"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ProductID}"/>
+                            <Text text="{ProductName}"/>
+                            <Text text="{UnitPrice}"/>
+                            <Text text="{UnitsInStock}"/>
+                            <Text text="{UnitsOnOrder}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
 </mvc:View>

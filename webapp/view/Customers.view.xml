@@ -5,7 +5,42 @@
   
   <Page title="Customers">
     <content>
-      <Text text="This is the Customers page."/>
-    </content>
+            <Table id="CustomersTable" inset="false" headerText="Customers List" items="{/Customers}">
+
+                <columns>
+                    <Column>
+                        <Text text="Customer ID"/>
+                    </Column>
+                    <Column>
+                        <Text text="Company"/>
+                    </Column>
+                    <Column>
+                        <Text text="Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Mobile no."/>
+                    </Column>
+                    <Column>
+                        <Text text="Address"/>
+                    </Column>
+                    <Column>
+                        <Text text="Nationality"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{CustomerID}"/>
+                            <Text text="{CompanyName}"/>
+                            <Text text="{ContactName}"/>
+                            <Text text="{Phone}"/>
+                            <Text text="{Address}"/>
+                            <Text text="{Country}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
   </Page>
 </mvc:View>

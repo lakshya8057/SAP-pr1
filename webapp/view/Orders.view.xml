@@ -5,7 +5,42 @@
   
   <Page title="Orders">
     <content>
-      <Text text="Welcome to the Orders page."/>
-    </content>
+            <Table id="Orders_Table" inset="false" headerText="Orders List" items="{/Orders}">
+
+                <columns>
+                    <Column>
+                        <Text text="Order ID"/>
+                    </Column>
+                    <Column>
+                        <Text text="Customer Id"/>
+                    </Column>
+                    <Column>
+                        <Text text="Employee Id"/>
+                    </Column>
+                    <Column>
+                        <Text text="Order Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Shipped Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Ship Name"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{OrderID}"/>
+                            <Text text="{CustomerID}"/>
+                            <Text text="{EmployeeID}"/>
+                            <Text text="{OrderDate}"/>
+                            <Text text="{ShippedDate}"/>
+                            <Text text="{ShipName}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
   </Page>
 </mvc:View>

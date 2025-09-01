@@ -5,7 +5,46 @@
   
   <Page title="Invoices">
     <content>
-      <Text text="Welcome to the Invoices page."/>
-    </content>
+            <Table id="Invoices_Table" inset="false" headerText="Invoices List" items="{/Invoices}">
+
+                <columns>
+                    <Column>
+                        <Text text="Customer Id"/>
+                    </Column>
+                    <Column>
+                        <Text text="Customer Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Address"/>
+                    </Column>
+                    <Column>
+                        <Text text="Order id"/>
+                    </Column>
+                    <Column>
+                        <Text text="Order Date"/>
+                    </Column>
+                    <Column>
+                        <Text text="Product Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Price"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{CustomerID}"/>
+                            <Text text="{CustomerName}"/>
+                            <Text text="{Address}"/>
+                            <Text text="{OrderID}"/>
+                            <Text text="{OrderDate}"/>
+                            <Text text="{ProductName}"/>
+                            <Text text="{ExtendedPrice}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
   </Page>
 </mvc:View>
