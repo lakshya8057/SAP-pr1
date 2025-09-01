@@ -1,0 +1,11 @@
+<mvc:View
+  controllerName="project3.controller.Employees"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  
+  <Page title="Employees">
+    <content>
+      <Text text="Welcome to the Employees page."/>
+    </content>
+  </Page>
+</mvc:View>

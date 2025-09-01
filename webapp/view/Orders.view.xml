@@ -1,0 +1,11 @@
+<mvc:View
+  controllerName="project3.controller.Orders"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  
+  <Page title="Orders">
+    <content>
+      <Text text="Welcome to the Orders page."/>
+    </content>
+  </Page>
+</mvc:View>

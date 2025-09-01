@@ -77,33 +77,92 @@
       ]
     },
     "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "controlAggregation": "pages",
-        "controlId": "app",
-        "transition": "slide",
-        "type": "View",
-        "viewType": "XML",
-        "path": "project3.view",
-        "async": true,
-        "viewPath": "project3.view"
-      },
-      "routes": [
-        {
-          "name": "RouteView1",
-          "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
-        }
-      ],
-      "targets": {
-        "TargetView1": {
-          "id": "View1",
-          "name": "View1"
-        }
-      }
+   "config": {
+    "routerClass": "sap.m.routing.Router",
+    "controlAggregation": "pages",
+    "controlId": "app",
+    "transition": "slide",
+    "type": "View",
+    "viewType": "XML",
+    "viewPath": "project3.view",
+    "async": true
+  },
+  "routes": [
+    {
+      "name": "home",
+      "pattern": "",
+      "target": "Home"
     },
+    {
+      "name": "products",
+      "pattern": "products",
+      "target": "Products"
+    },
+    {
+      "name": "customers",
+      "pattern": "customers",
+      "target": "Customers"
+    },
+    {
+      "name": "employees",
+      "pattern": "employees",
+      "target": "Employees"
+    },
+    {
+      "name": "orders",
+      "pattern": "orders",
+      "target": "Orders"
+    },
+    {
+      "name": "invoices",
+      "pattern": "invoices",
+      "target": "Invoices"
+    },
+    {
+      "name": "suppliers",
+      "pattern": "suppliers",
+      "target": "Suppliers"
+    }
+  ],
+  "targets": {
+  "Home": {
+    "viewName": "View1",
+    "viewType": "XML",
+    "id": "Home"
+  },
+  "Products": {
+    "viewName": "Products",
+    "viewType": "XML",
+    "id": "Products"
+  },
+  "Customers": {
+    "viewName": "Customers",
+    "viewType": "XML",
+    "id": "Customers"
+  },
+  "Employees": {
+    "viewName": "Employees",
+    "viewType": "XML",
+    "id": "Employees"
+  },
+  "Orders": {
+    "viewName": "Orders",
+    "viewType": "XML",
+    "id": "Orders"
+  },
+  "Invoices": {
+    "viewName": "Invoices",
+    "viewType": "XML",
+    "id": "Invoices"
+  },
+  "Suppliers": {
+    "viewName": "Suppliers",
+    "viewType": "XML",
+    "id": "Suppliers"
+  }
+  }
+},
+
     "rootView": {
       "viewName": "project3.view.App",
       "type": "XML",

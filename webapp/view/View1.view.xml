@@ -15,7 +15,7 @@
 
                     <!-- First Row -->
                     <HBox justifyContent="Center" alignItems="Center">
-                        <GenericTile press="onPress">
+                        <GenericTile press="onNavToProducts" >
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Products" level="H2" />
@@ -24,8 +24,8 @@
                             </TileContent>
                         </GenericTile>
 
-                        <GenericTile class="sapUiSmallMarginBegin" press="onPress">
-                            <TileContent>
+                        <GenericTile class="sapUiSmallMarginBegin" press="onNavToCustomers" >
+                            <TileContent> 
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Customers" level="H2" />
                                     <Text text="15" />
@@ -33,7 +33,7 @@
                             </TileContent>
                         </GenericTile>
 
-                        <GenericTile class="sapUiSmallMarginBegin" press=".onPress">
+                        <GenericTile class="sapUiSmallMarginBegin" press="onNavToEmployees">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Employees" level="H2" />
@@ -45,7 +45,7 @@
 
                     <!-- Second Row -->
                     <HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMarginTop">
-                        <GenericTile press="onPress">
+                        <GenericTile press=".onNavToOrders">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Orders" level="H2" />
@@ -54,7 +54,7 @@
                             </TileContent>
                         </GenericTile>
 
-                        <GenericTile class="sapUiSmallMarginBegin" press="onPress">
+                        <GenericTile class="sapUiSmallMarginBegin" press=".onNavToInvoices">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Invoices" level="H2" />
@@ -63,7 +63,7 @@
                             </TileContent>
                         </GenericTile>
 
-                        <GenericTile class="sapUiSmallMarginBegin" press="onPress">
+                        <GenericTile class="sapUiSmallMarginBegin" press=".onNavToSuppliers">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Suppliers" level="H2" />

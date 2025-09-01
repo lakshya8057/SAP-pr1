@@ -1,0 +1,11 @@
+<mvc:View
+  controllerName="project3.controller.Suppliers"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  
+  <Page title="Suppliers">
+    <content>
+      <Text text="Welcome to the Suppliers page."/>
+    </content>
+  </Page>
+</mvc:View>
