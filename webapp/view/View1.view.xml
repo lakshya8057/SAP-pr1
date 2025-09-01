@@ -1,0 +1,81 @@
+
+<mvc:View controllerName="project3.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="page" title="{i18n>title}" showHeader="true">
+        <content>
+            <VBox justifyContent="Center" alignItems="Center" fitContainer="true" renderType="Bare">
+                <Title text="Northwind Company ERP Portal" titleStyle="H2" class="sapUiSmallMarginBottom" />
+
+                <!-- Heading -->
+
+                <!-- Tiles Section -->
+                <VBox alignItems="Center" justifyContent="Center">
+
+                    <!-- First Row -->
+                    <HBox justifyContent="Center" alignItems="Center">
+                        <GenericTile press="onPress">
+                            <TileContent>
+                                <VBox alignItems="Center" justifyContent="Center">
+                                    <Title text="Products" level="H2" />
+                                    <Text text="20" />
+                                </VBox>
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="sapUiSmallMarginBegin" press="onPress">
+                            <TileContent>
+                                <VBox alignItems="Center" justifyContent="Center">
+                                    <Title text="Customers" level="H2" />
+                                    <Text text="15" />
+                                </VBox>
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="sapUiSmallMarginBegin" press=".onPress">
+                            <TileContent>
+                                <VBox alignItems="Center" justifyContent="Center">
+                                    <Title text="Employees" level="H2" />
+                                    <Text text="10" />
+                                </VBox>
+                            </TileContent>
+                        </GenericTile>
+                    </HBox>
+
+                    <!-- Second Row -->
+                    <HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMarginTop">
+                        <GenericTile press="onPress">
+                            <TileContent>
+                                <VBox alignItems="Center" justifyContent="Center">
+                                    <Title text="Orders" level="H2" />
+                                    <Text text="100" />
+                                </VBox>
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="sapUiSmallMarginBegin" press="onPress">
+                            <TileContent>
+                                <VBox alignItems="Center" justifyContent="Center">
+                                    <Title text="Invoices" level="H2" />
+                                    <Text text="40" />
+                                </VBox>
+                            </TileContent>
+                        </GenericTile>
+
+                        <GenericTile class="sapUiSmallMarginBegin" press="onPress">
+                            <TileContent>
+                                <VBox alignItems="Center" justifyContent="Center">
+                                    <Title text="Suppliers" level="H2" />
+                                    <Text text="10" />
+                                </VBox>
+                            </TileContent>
+                        </GenericTile>
+                    </HBox>
+
+                </VBox>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>
