@@ -19,7 +19,7 @@
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Products" level="H2" />
-                                    <Text text="20" />
+                                    <Text id="total_products" />
                                 </VBox>
                             </TileContent>
                         </GenericTile>
@@ -28,7 +28,7 @@
                             <TileContent> 
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Customers" level="H2" />
-                                    <Text text="15" />
+                                    <Text id="total_customers"/>
                                 </VBox>
                             </TileContent>
                         </GenericTile>
@@ -37,7 +37,7 @@
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Employees" level="H2" />
-                                    <Text text="10" />
+                                    <Text id="total_employees" />
                                 </VBox>
                             </TileContent>
                         </GenericTile>
@@ -49,7 +49,7 @@
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Orders" level="H2" />
-                                    <Text text="100" />
+                                    <Text id="total_orders" />
                                 </VBox>
                             </TileContent>
                         </GenericTile>
@@ -58,7 +58,7 @@
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Invoices" level="H2" />
-                                    <Text text="40" />
+                                    <Text id="total_invoices" />
                                 </VBox>
                             </TileContent>
                         </GenericTile>
@@ -67,7 +67,7 @@
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
                                     <Title text="Suppliers" level="H2" />
-                                    <Text text="10" />
+                                    <Text id="total_suppliers" />
                                 </VBox>
                             </TileContent>
                         </GenericTile>
