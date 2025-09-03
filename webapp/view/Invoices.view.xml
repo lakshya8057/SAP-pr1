@@ -1,10 +1,50 @@
 <mvc:View
   controllerName="project3.controller.Invoices"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar">
   
   <Page title="Invoices">
     <content>
+    <fb:FilterBar id="filterBarInvoices" 
+    showFilterConfiguration="false" 
+    showRestoreButton="false" 
+    showClearButton="false" 
+    showGoOnFB="true" 
+    useToolbar="true" 
+    search=".onSearch">
+
+    <fb:filterItems>
+        <!-- Customer Name -->
+        <fb:FilterItem name="CustomerName" label="Customer Name">
+            <fb:control>
+                <ComboBox id="cbInvoiceCustomerName" width="16rem" items="{/CustomerNames}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <!-- Product Name -->
+        <fb:FilterItem name="ProductName" label="Product Name">
+            <fb:control>
+                <ComboBox id="cbInvoiceProductName" width="16rem" items="{/ProductNames}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <!-- Customer ID -->
+        <fb:FilterItem name="CustomerID" label="Customer ID">
+            <fb:control>
+                <ComboBox id="cbInvoiceCustomerId" width="14rem" items="{/CustomerIds}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+    </fb:filterItems>
+</fb:FilterBar>
+
             <Table id="Invoices_Table" inset="false" headerText="Invoices List" items="{/Invoices}">
 
                 <columns>

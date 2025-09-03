@@ -1,10 +1,41 @@
 <mvc:View
   controllerName="project3.controller.Suppliers"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar">
   
   <Page title="Suppliers">
     <content>
+    <fb:FilterBar id="filterBarSuppliers" 
+    showFilterConfiguration="false" 
+    showRestoreButton="false" 
+    showClearButton="false" 
+    showGoOnFB="true" 
+    useToolbar="true" 
+    search=".onSearch">
+
+    <fb:filterItems>
+        <!-- Contact Name -->
+        <fb:FilterItem name="ContactName" label="Contact Name">
+            <fb:control>
+                <ComboBox id="cbContactName" width="16rem" items="{/ContactNames}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <!-- Contact Title -->
+        <fb:FilterItem name="ContactTitle" label="Contact Title">
+            <fb:control>
+                <ComboBox id="cbContactTitle" width="16rem" items="{/ContactTitles}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+    </fb:filterItems>
+</fb:FilterBar>
+
             <Table id="Suppliers_Table" inset="false" headerText="Suppliers List" items="{/Suppliers}">
 
                 <columns>

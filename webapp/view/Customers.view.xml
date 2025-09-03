@@ -1,10 +1,41 @@
 <mvc:View
   controllerName="project3.controller.Customers"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar">
   
   <Page title="Customers">
     <content>
+    <fb:FilterBar id="filterBarCustomers" 
+    showFilterConfiguration="false" 
+    showRestoreButton="false" 
+    showClearButton="false" 
+    showGoOnFB="true" 
+    useToolbar="true" 
+    search=".onSearch">
+
+    <fb:filterItems>
+        <!-- Customer ID -->
+        <fb:FilterItem name="CustomerID" label="Customer ID">
+            <fb:control>
+                <ComboBox id="cbCustomerId" width="12rem" items="{/CustomerIds}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <!-- Customer Name -->
+        <fb:FilterItem name="CustomerName" label="Customer Name">
+            <fb:control>
+                <ComboBox id="cbCustomerName" width="16rem" items="{/CustomerNames}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+    </fb:filterItems>
+</fb:FilterBar>
+
             <Table id="CustomersTable" inset="false" headerText="Customers List" items="{/Customers}">
 
                 <columns>

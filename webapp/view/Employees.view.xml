@@ -1,10 +1,50 @@
 <mvc:View
   controllerName="project3.controller.Employees"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar">
   
   <Page title="Employees">
     <content>
+    <fb:FilterBar id="filterBarEmployees" 
+    showFilterConfiguration="false" 
+    showRestoreButton="false" 
+    showClearButton="false" 
+    showGoOnFB="true" 
+    useToolbar="true" 
+    search=".onSearch">
+
+    <fb:filterItems>
+        <!-- Employee ID -->
+        <fb:FilterItem name="EmployeeID" label="Employee ID">
+            <fb:control>
+                <ComboBox id="cbEmployeeId" width="12rem" items="{/EmployeeIds}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <!-- First Name -->
+        <fb:FilterItem name="FirstName" label="First Name">
+            <fb:control>
+                <ComboBox id="cbFirstName" width="14rem" items="{/FirstNames}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <!-- Last Name -->
+        <fb:FilterItem name="LastName" label="Last Name">
+            <fb:control>
+                <ComboBox id="cbLastName" width="14rem" items="{/LastNames}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+    </fb:filterItems>
+</fb:FilterBar>
+
             <Table id="Employees_Table" inset="false" headerText="Employees List" items="{/Employees}">
 
                 <columns>

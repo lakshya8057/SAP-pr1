@@ -1,10 +1,48 @@
 <mvc:View
   controllerName="project3.controller.Orders"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar">
   
   <Page title="Orders">
     <content>
+    <fb:FilterBar id="filterBarOrders" 
+    showFilterConfiguration="false" 
+    showRestoreButton="false" 
+    showClearButton="false" 
+    showGoOnFB="true" 
+    useToolbar="true" 
+    search=".onSearch">
+
+    <fb:filterItems>
+        <!-- Order ID -->
+        <fb:FilterItem name="OrderID" label="Order ID">
+            <fb:control>
+                <ComboBox id="cbOrderId" width="12rem" items="{/OrderIds}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <!-- Customer ID -->
+        <fb:FilterItem name="CustomerID" label="Customer ID">
+            <fb:control>
+                <ComboBox id="cbOrderCustomerId" width="14rem" items="{/CustomerIds}">
+                    <core:Item key="{key}" text="{name}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <!-- Order Date -->
+        <fb:FilterItem name="OrderDate" label="Order Date">
+            <fb:control>
+                <DatePicker id="dpOrderDate" width="14rem" />
+            </fb:control>
+        </fb:FilterItem>
+    </fb:filterItems>
+</fb:FilterBar>
+
             <Table id="Orders_Table" inset="false" headerText="Orders List" items="{/Orders}">
 
                 <columns>

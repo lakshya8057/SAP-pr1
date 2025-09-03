@@ -1,11 +1,29 @@
 <mvc:View controllerName="project3.controller.Products"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-
-    <Page title="Products">
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar">
+    <Page title="Products">        <!-- FilterBar -->
         <content>
+            <fb:FilterBar id="filterBar" showFilterConfiguration="false" showRestoreButton="false" showClearButton="false" showGoOnFB="true" useToolbar="true" search=".onSearch">                <!-- Product ID -->
+                <fb:filterItems>
+                    <fb:FilterItem name="ProductID" label="Product ID">
+                        <fb:control>
+                            <ComboBox id="cbProdId" width="12rem" items="{/ProductIds}">
+                                <core:Item key="{key}" text="{name}" />
+                            </ComboBox>
+                        </fb:control>
+                    </fb:FilterItem>                    <!-- Product Name -->
+                    <fb:FilterItem name="ProductName" label="Product Name">
+                        <fb:control>
+                            <ComboBox id="cbProdName" width="16rem" items="{/ProductNames}">
+                                <core:Item key="{key}" text="{name}" />
+                            </ComboBox>
+                        </fb:control>
+                    </fb:FilterItem>
+                </fb:filterItems>
+            </fb:FilterBar>            <!-- Table -->
             <Table id="productsTable" inset="false" headerText="Products List" items="{/Products}">
-
                 <columns>
                     <Column>
                         <Text text="Product ID"/>
@@ -23,7 +41,6 @@
                         <Text text="Units in Order"/>
                     </Column>
                 </columns>
-
                 <items>
                     <ColumnListItem>
                         <cells>
