@@ -17,19 +17,13 @@
 
     <fb:filterItems>
         <!-- Employee ID -->
-        <fb:FilterItem name="EmployeeID" label="Employee ID">
-            <fb:control>
-                <ComboBox id="cbEmployeeId" width="12rem" items="{/EmployeeIds}">
-                    <core:Item key="{key}" text="{name}" />
-                </ComboBox>
-            </fb:control>
-        </fb:FilterItem>
+        
 
         <!-- First Name -->
         <fb:FilterItem name="FirstName" label="First Name">
             <fb:control>
-                <ComboBox id="cbFirstName" width="14rem" items="{/FirstNames}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbFirstName" width="14rem" items="{/Employees}">
+                    <core:Item key="{FirstName}" text="{FirstName}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>
@@ -37,8 +31,16 @@
         <!-- Last Name -->
         <fb:FilterItem name="LastName" label="Last Name">
             <fb:control>
-                <ComboBox id="cbLastName" width="14rem" items="{/LastNames}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbLastName" width="14rem" items="{/Employees}">
+                    <core:Item key="{LastName}" text="{LastName}" />
+                </ComboBox>
+            </fb:control>
+        </fb:FilterItem>
+
+        <fb:FilterItem name="Address" label="Address">
+            <fb:control>
+                <ComboBox id="cbAddress" width="12rem" items="{/Employees}">
+                    <core:Item key="{Address}" text="{Address}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>

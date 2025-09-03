@@ -3,43 +3,46 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
     xmlns:fb="sap.ui.comp.filterbar">
-    <Page title="Products">        <!-- FilterBar -->
+
+    <Page title="Products">
         <content>
-            <fb:FilterBar id="filterBar" showFilterConfiguration="false" showRestoreButton="false" showClearButton="false" showGoOnFB="true" useToolbar="true" search=".onSearch">                <!-- Product ID -->
+            <fb:FilterBar id="filterBar"
+                showFilterConfiguration="false"
+                showRestoreButton="false"
+                showClearButton="false"
+                showGoOnFB="true"
+                useToolbar="true"
+                search=".onSearch">
+
                 <fb:filterItems>
+                    <!-- Product ID -->
                     <fb:FilterItem name="ProductID" label="Product ID">
                         <fb:control>
-                            <ComboBox id="cbProdId" width="12rem" items="{/ProductIds}">
-                                <core:Item key="{key}" text="{name}" />
+                            <ComboBox id="cbProdId" width="12rem" items="{/Products}">
+                                <core:Item key="{ProductID}" text="{ProductID}" />
                             </ComboBox>
                         </fb:control>
-                    </fb:FilterItem>                    <!-- Product Name -->
+                    </fb:FilterItem>
+
+                    <!-- Product Name -->
                     <fb:FilterItem name="ProductName" label="Product Name">
                         <fb:control>
-                            <ComboBox id="cbProdName" width="16rem" items="{/ProductNames}">
-                                <core:Item key="{key}" text="{name}" />
+                            <ComboBox id="cbProdName" width="16rem" items="{/Products}">
+                                <core:Item key="{ProductName}" text="{ProductName}" />
                             </ComboBox>
                         </fb:control>
                     </fb:FilterItem>
                 </fb:filterItems>
-            </fb:FilterBar>            <!-- Table -->
+            </fb:FilterBar>
+
+            <!-- Table -->
             <Table id="productsTable" inset="false" headerText="Products List" items="{/Products}">
                 <columns>
-                    <Column>
-                        <Text text="Product ID"/>
-                    </Column>
-                    <Column>
-                        <Text text="Product Name"/>
-                    </Column>
-                    <Column>
-                        <Text text="Price"/>
-                    </Column>
-                    <Column>
-                        <Text text="Units in Stock"/>
-                    </Column>
-                    <Column>
-                        <Text text="Units in Order"/>
-                    </Column>
+                    <Column><Text text="Product ID"/></Column>
+                    <Column><Text text="Product Name"/></Column>
+                    <Column><Text text="Price"/></Column>
+                    <Column><Text text="Units in Stock"/></Column>
+                    <Column><Text text="Units in Order"/></Column>
                 </columns>
                 <items>
                     <ColumnListItem>

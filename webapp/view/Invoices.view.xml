@@ -19,8 +19,8 @@
         <!-- Customer Name -->
         <fb:FilterItem name="CustomerName" label="Customer Name">
             <fb:control>
-                <ComboBox id="cbInvoiceCustomerName" width="16rem" items="{/CustomerNames}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbInvoiceCustomerName" width="16rem" items="{/Invoices}">
+                    <core:Item key="{CustomerName}" text="{CustomerName}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>
@@ -28,8 +28,8 @@
         <!-- Product Name -->
         <fb:FilterItem name="ProductName" label="Product Name">
             <fb:control>
-                <ComboBox id="cbInvoiceProductName" width="16rem" items="{/ProductNames}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbInvoiceProductName" width="16rem" items="{/Invoices}">
+                    <core:Item key="{ProductName}" text="{ProductName}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>
@@ -37,8 +37,8 @@
         <!-- Customer ID -->
         <fb:FilterItem name="CustomerID" label="Customer ID">
             <fb:control>
-                <ComboBox id="cbInvoiceCustomerId" width="14rem" items="{/CustomerIds}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbInvoiceCustomerId" width="14rem" items="{/Invoices}">
+                    <core:Item key="{CustomerID}" text="{CustomerID}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>

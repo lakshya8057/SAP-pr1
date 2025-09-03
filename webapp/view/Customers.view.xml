@@ -16,25 +16,26 @@
     search=".onSearch">
 
     <fb:filterItems>
-        <!-- Customer ID -->
-        <fb:FilterItem name="CustomerID" label="Customer ID">
+        <!-- Company (from CompanyName) -->
+        <fb:FilterItem name="CompanyName" label="Company">
             <fb:control>
-                <ComboBox id="cbCustomerId" width="12rem" items="{/CustomerIds}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbCustomerId" width="16rem" items="{/Customers}">
+                    <core:Item key="{CompanyName}" text="{CompanyName}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>
 
-        <!-- Customer Name -->
-        <fb:FilterItem name="CustomerName" label="Customer Name">
+        <!-- Nationality (from Country) -->
+        <fb:FilterItem name="Country" label="Nationality">
             <fb:control>
-                <ComboBox id="cbCustomerName" width="16rem" items="{/CustomerNames}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbCustomerName" width="12rem" items="{/Customers}">
+                    <core:Item key="{Country}" text="{Country}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>
     </fb:filterItems>
 </fb:FilterBar>
+
 
             <Table id="CustomersTable" inset="false" headerText="Customers List" items="{/Customers}">
 

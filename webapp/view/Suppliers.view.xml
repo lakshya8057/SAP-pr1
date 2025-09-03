@@ -19,8 +19,8 @@
         <!-- Contact Name -->
         <fb:FilterItem name="ContactName" label="Contact Name">
             <fb:control>
-                <ComboBox id="cbContactName" width="16rem" items="{/ContactNames}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbContactName" width="16rem" items="{/Suppliers}">
+                    <core:Item key="{ContactName}" text="{ContactName}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>
@@ -28,8 +28,8 @@
         <!-- Contact Title -->
         <fb:FilterItem name="ContactTitle" label="Contact Title">
             <fb:control>
-                <ComboBox id="cbContactTitle" width="16rem" items="{/ContactTitles}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbContactTitle" width="16rem" items="{/Suppliers}">
+                    <core:Item key="{ContactTitle}" text="{ContactTitle}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>

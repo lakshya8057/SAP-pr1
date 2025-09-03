@@ -16,28 +16,22 @@
     search=".onSearch">
 
     <fb:filterItems>
-        <!-- Order ID -->
-        <fb:FilterItem name="OrderID" label="Order ID">
+
+        <!-- Employee ID -->
+        <fb:FilterItem name="Employee" label="Employee ID">
             <fb:control>
-                <ComboBox id="cbOrderId" width="12rem" items="{/OrderIds}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbOrderEmployeeId" width="14rem" items="{/Orders}">
+                    <core:Item key="{EmployeeID}" text="{EmployeeID}" />
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>
 
-        <!-- Customer ID -->
-        <fb:FilterItem name="CustomerID" label="Customer ID">
+        <!-- customer id -->
+        <fb:FilterItem name="Customer" label="Customer ID">
             <fb:control>
-                <ComboBox id="cbOrderCustomerId" width="14rem" items="{/CustomerIds}">
-                    <core:Item key="{key}" text="{name}" />
+                <ComboBox id="cbOrderCustomerId" width="14rem" items="{/Orders}">
+                    <core:Item key="{CustomerID}" text="{CustomerID}" />
                 </ComboBox>
-            </fb:control>
-        </fb:FilterItem>
-
-        <!-- Order Date -->
-        <fb:FilterItem name="OrderDate" label="Order Date">
-            <fb:control>
-                <DatePicker id="dpOrderDate" width="14rem" />
             </fb:control>
         </fb:FilterItem>
     </fb:filterItems>

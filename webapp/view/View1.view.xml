@@ -15,29 +15,29 @@
 
                     <!-- First Row -->
                     <HBox justifyContent="Center" alignItems="Center">
-                        <GenericTile press="onNavToProducts" >
+                        <GenericTile class="tile" press="onNavToProducts">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
-                                    <Title text="Products" level="H2" />
-                                    <Text id="total_products" />
+                                    <Title text="Products" level="H2" class="tile_title" />
+                                    <Text id="total_products"  class="qnty"/>
                                 </VBox>
                             </TileContent>
                         </GenericTile>
 
-                        <GenericTile class="sapUiSmallMarginBegin" press="onNavToCustomers" >
+                        <GenericTile class="sapUiSmallMarginBegin tile" press="onNavToCustomers" >
                             <TileContent> 
                                 <VBox alignItems="Center" justifyContent="Center">
-                                    <Title text="Customers" level="H2" />
-                                    <Text id="total_customers"/>
+                                    <Title text="Customers" level="H2" class="tile_title"/>
+                                    <Text id="total_customers" class="qnty"/>
                                 </VBox>
                             </TileContent>
                         </GenericTile>
 
-                        <GenericTile class="sapUiSmallMarginBegin" press="onNavToEmployees">
+                        <GenericTile class="sapUiSmallMarginBegin tile" press="onNavToEmployees">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
-                                    <Title text="Employees" level="H2" />
-                                    <Text id="total_employees" />
+                                    <Title text="Employees" level="H2" class="tile_title"/>
+                                    <Text id="total_employees"  class="qnty"/>
                                 </VBox>
                             </TileContent>
                         </GenericTile>
@@ -45,29 +45,29 @@
 
                     <!-- Second Row -->
                     <HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMarginTop">
-                        <GenericTile press=".onNavToOrders">
+                        <GenericTile class="tile" press=".onNavToOrders">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
-                                    <Title text="Orders" level="H2" />
-                                    <Text id="total_orders" />
+                                    <Title text="Orders" level="H2" class="tile_title"/>
+                                    <Text id="total_orders"  class="qnty"/>
                                 </VBox>
                             </TileContent>
                         </GenericTile>
 
-                        <GenericTile class="sapUiSmallMarginBegin" press=".onNavToInvoices">
+                        <GenericTile class="sapUiSmallMarginBegin tile" press=".onNavToInvoices">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
-                                    <Title text="Invoices" level="H2" />
-                                    <Text id="total_invoices" />
+                                    <Title text="Invoices" level="H2" class="tile_title"/>
+                                    <Text id="total_invoices" class="qnty" />
                                 </VBox>
                             </TileContent>
                         </GenericTile>
 
-                        <GenericTile class="sapUiSmallMarginBegin" press=".onNavToSuppliers">
+                        <GenericTile class="sapUiSmallMarginBegin tile" press=".onNavToSuppliers">
                             <TileContent>
                                 <VBox alignItems="Center" justifyContent="Center">
-                                    <Title text="Suppliers" level="H2" />
-                                    <Text id="total_suppliers" />
+                                    <Title text="Suppliers" level="H2" class="tile_title"/>
+                                    <Text id="total_suppliers" class="qnty" />
                                 </VBox>
                             </TileContent>
                         </GenericTile>
