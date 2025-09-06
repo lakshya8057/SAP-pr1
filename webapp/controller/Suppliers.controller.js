@@ -32,7 +32,13 @@ sap.ui.define([
 
       // Apply filters to the table binding
       oBinding.filter(aFilters);
+    },
+    onOpenDialog: function () {
+      if(!this.Dialog){
+        this.Dialog = sap.ui.xmlfragment("project3.fragments.Dialog", this);
+        this.getView().addDependent(this.Dialog);
+      }
+      this.Dialog.open();
     }
-
   });
 });

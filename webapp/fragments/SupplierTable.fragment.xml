@@ -1,0 +1,35 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Table id="Suppliers_Table" inset="false" headerText="Suppliers List" items="{/Suppliers}">
+                <columns>
+                    <Column>
+                        <Text text="Supplier ID"/>
+                    </Column>
+                    <Column>
+                        <Text text="Contact Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Contact Title"/>
+                    </Column>
+                    <Column>
+                        <Text text="Address"/>
+                    </Column>
+                    <Column>
+                        <Text text="Mobile No."/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{SupplierID}"/>
+                            <Text text="{ContactName}"/>
+                            <Text text="{ContactTitle}"/>
+                            <Text text="{Address}"/>
+                            <Text text="{Phone}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+</core:FragmentDefinition>

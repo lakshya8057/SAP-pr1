@@ -33,41 +33,12 @@
                 </ComboBox>
             </fb:control>
         </fb:FilterItem>
+
     </fb:filterItems>
 </fb:FilterBar>
+        <Button text="Open Dialog" press=".onOpenDialog"/>
 
-            <Table id="Suppliers_Table" inset="false" headerText="Suppliers List" items="{/Suppliers}">
-
-                <columns>
-                    <Column>
-                        <Text text="Supplier ID"/>
-                    </Column>
-                    <Column>
-                        <Text text="Contact Name"/>
-                    </Column>
-                    <Column>
-                        <Text text="Contact Title"/>
-                    </Column>
-                    <Column>
-                        <Text text="Address"/>
-                    </Column>
-                    <Column>
-                        <Text text="Mobile No."/>
-                    </Column>
-                </columns>
-
-                <items>
-                    <ColumnListItem>
-                        <cells>
-                            <Text text="{SupplierID}"/>
-                            <Text text="{ContactName}"/>
-                            <Text text="{ContactTitle}"/>
-                            <Text text="{Address}"/>
-                            <Text text="{Phone}"/>
-                        </cells>
-                    </ColumnListItem>
-                </items>
-            </Table>
+    <core:Fragment fragmentName="project3.fragments.SupplierTable" type="XML"/>
         </content>
   </Page>
 </mvc:View>
